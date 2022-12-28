@@ -11,7 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+
   ],
   exports: [
     CaculatorComponent,

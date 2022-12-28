@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, NgModule, Output } from '@angular/core';
 
 @Component({
   selector: 'app-caculator',
@@ -6,7 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./caculator.component.css']
 })
 export class CaculatorComponent {
-  num1:number=2;
-  num2:number=3;
-  resultado:Number=this.num1+this.num2;
+  resultado!: number
+  @Output() resultadoEnviar = new EventEmitter<number>
+  operar!: String
+  operacion(num1: string, num2: string, Value: String) {
+    this.operar = Value
+    console.log(this.operar)
+    if (this.operar == "+") {
+      this.resultado = Number(num1) + Number(num2)
+      this.resultadoEnviar.emit(this.resultado)
+    } else if (this.operar == "-") {
+      this.resultado = Number(num1) - Number(num2)
+      this.resultadoEnviar.emit(this.resultado)
+    } else if (Value == '*') {
+      this.resultado = Number(num1) * Number(num2)
+      this.resultadoEnviar.emit(this.resultado)
+    } else if (Value = '/') {
+      this.resultado = Number(num1) / Number(num2)
+      this.resultadoEnviar.emit(this.resultado)
+    }
+  }
 }

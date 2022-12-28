@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="row pt-5">
+  <div
+    class="card col-2 offset-1 col-md-2 offset-md-4"
+    style="width: 18rem; height: 9 rem"
+    >
+    <h5 class="card-header text-center">Resultado</h5>
+    <div class="card-body text-center">
+      <h1 class="card-subtitle mt- text-muted" style="font-size: 4.5rem">{{resultado}}</h1>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-2 offset-1 col-md-4 offset-md-3">
+        <app-caculator (resultadoEnviar)="resultado = $event"></app-caculator>
+    </div>
+</div>

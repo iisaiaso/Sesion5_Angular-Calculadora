@@ -1,1 +1,36 @@
-<p>caculator works!</p>
+<div>
+  <div class="input-group">
+    <span class="input-group-text"><i class="bi bi-123"></i></span>
+    <div class="form-floating">
+      <input
+        type="text"
+        #num1
+        class="form-control text-primary fs-h1"
+        placeholder="Ingrese número"
+      />
+      <label for="floatingInputGroup2" class="text-secondary"
+        >Ingrese número</label
+      >
+    </div>
+  </div>
+  <div class="input-group pt-3">
+    <span class="input-group-text"><i class="bi bi-123"></i></span>
+    <div class="form-floating">
+      <input
+        type="text"
+        class="form-control text-primary fs-h1"
+        placeholder="Ingrese número"
+        #num2
+      />
+      <label for="floatingInputGroup2" class="text-secondary"
+        >Ingrese número</label
+      >
+    </div>
+  </div>
+  <div class="mt-3">
+    <button class="btn btn-primary"      (click)="operacion(num1.value,num2.value,'+')">+</button>
+    <button class="btn btn-primary m-2"  (click)="operacion(num1.value,num2.value,'-')">-</button>
+    <button class="btn btn-primary ms-2" (click)="operacion(num1.value,num2.value,'*')">*</button>
+    <button class="btn btn-primary ms-2" (click)="operacion(num1.value,num2.value,'/')">/</button>
+  </div>
+</div>
