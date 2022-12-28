@@ -27,10 +27,11 @@
       >
     </div>
   </div>
-  <div class="mt-3">
-    <button class="btn btn-primary"      (click)="operacion(num1.value,num2.value,'+')">+</button>
-    <button class="btn btn-primary m-2"  (click)="operacion(num1.value,num2.value,'-')">-</button>
-    <button class="btn btn-primary ms-2" (click)="operacion(num1.value,num2.value,'*')">*</button>
-    <button class="btn btn-primary ms-2" (click)="operacion(num1.value,num2.value,'/')">/</button>
+  <h5 class="pt-3">Realizar operación:</h5>
+  <div class="mt-3 button">
+    <button class="btn btn-dark"      (click)="operacion(num1.value,num2.value,'+')">+</button>
+    <button class="btn btn-dark"  (click)="operacion(num1.value,num2.value,'-')">-</button>
+    <button class="btn btn-dark" (click)="operacion(num1.value,num2.value,'*')">x</button>
+    <button class="btn btn-dark" (click)="operacion(num1.value,num2.value,'/')">/</button>
   </div>
 </div>
