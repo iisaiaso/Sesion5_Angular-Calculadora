@@ -13,17 +13,34 @@ export class CaculatorComponent {
     this.operar = Value
     console.log(this.operar)
     if (this.operar == "+") {
-      this.resultado = Number(num1) + Number(num2)
-      this.resultadoEnviar.emit(this.resultado)
+      if (num1 != "" && num2 != "") {
+        this.resultado = Number(num1) + Number(num2)
+        this.resultadoEnviar.emit(this.resultado)
+      }else{
+        alert("Los campos no deben estar vacios")
+      }
     } else if (this.operar == "-") {
-      this.resultado = Number(num1) - Number(num2)
-      this.resultadoEnviar.emit(this.resultado)
+      if (num1 != "" && num2 != "") {
+        this.resultado = Number(num1) - Number(num2)
+        this.resultadoEnviar.emit(this.resultado)
+      } else {
+        alert("Los campos no deben estar vacios")
+      }
     } else if (Value == '*') {
-      this.resultado = Number(num1) * Number(num2)
-      this.resultadoEnviar.emit(this.resultado)
+      if (num1 != "" && num2 != "") {
+        this.resultado = Number(num1) * Number(num2)
+        this.resultadoEnviar.emit(this.resultado)
+      } else {
+        alert("Los campos no deben estar vacios")
+      }
     } else if (Value = '/') {
-      this.resultado = Number(num1) / Number(num2)
-      this.resultadoEnviar.emit(this.resultado)
+      if (num1 != "" && num2 != "") {
+        this.resultado = Number(num1) / Number(num2)
+        this.resultadoEnviar.emit(this.resultado)
+      } else {
+        alert("Los campos no deben estar vacios")
+      }
     }
+
   }
 }
